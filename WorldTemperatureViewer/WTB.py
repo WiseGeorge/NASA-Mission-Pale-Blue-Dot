@@ -100,7 +100,7 @@ def Author_Component():
     st.sidebar.markdown('### Developed By:')
     st.sidebar.markdown('#### **Jorge Felix Martinez Pazos**')
     st.sidebar.markdown('#### Contact Details:')
-    st.sidebar.markdown('##### 📧 **[Email](jorgefmp.mle@gmail.com)** ')
+    st.sidebar.markdown('##### 📧 **[Email](mailto:jorgefmp.mle@gmail.com)** ')
     st.sidebar.markdown('##### 💻 **[GitHub](https://github.com/WiseGeorge)**: ')
     st.sidebar.markdown('##### 💼 **[LinkedIn](https://www.linkedin.com/in/wisegeorgie/)**: ')
     st.sidebar.markdown('##### 🎓 **[ResearchGate](https://www.researchgate.net/profile/Jorge-Martinez-205)**: ')
