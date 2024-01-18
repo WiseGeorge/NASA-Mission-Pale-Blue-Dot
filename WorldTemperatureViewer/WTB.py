@@ -324,7 +324,7 @@ if selected=='Forecasting':
         with col2:
             start_year = st.number_input("Start Year", min_value=2024, max_value=2090, value=2024)
         with col3:
-            end_year = st.number_input("End Year", min_value=2024, max_value=2091, value=2024)
+            end_year = st.number_input("End Year", min_value=start_year, max_value=2091, value=2024)
 
         def plot_forecast_altair_yearly(models, city, start_year, end_year):
             # Asegúrate de que las fechas estén en el formato correcto
