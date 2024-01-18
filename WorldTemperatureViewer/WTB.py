@@ -100,11 +100,11 @@ def Author_Component():
     st.sidebar.markdown('### Developed By:')
     st.sidebar.markdown('#### **Jorge Felix Martinez Pazos**')
     st.sidebar.markdown('#### Contact Details:')
-    st.sidebar.markdown('##### 📧 **[Email](link.com)** ')
-    st.sidebar.markdown('##### 💻 **[GitHub](https://github.com)**: ')
-    st.sidebar.markdown('##### 💼 **[LinkedIn](LK.com)**: ')
-    st.sidebar.markdown('##### 🎓 **[ResearchGate](asd.com)**: ')
-    st.sidebar.markdown('##### Ⓜ️ **[Medium](www.asd.com)**: ')
+    st.sidebar.markdown('##### 📧 **[Email](jorgefmp.mle@gmail.com)** ')
+    st.sidebar.markdown('##### 💻 **[GitHub](https://github.com/WiseGeorge)**: ')
+    st.sidebar.markdown('##### 💼 **[LinkedIn](https://www.linkedin.com/in/wisegeorgie/)**: ')
+    st.sidebar.markdown('##### 🎓 **[ResearchGate](https://www.researchgate.net/profile/Jorge-Martinez-205)**: ')
+    st.sidebar.markdown('##### Ⓜ️ **[Medium](https://medium.com/@jorgefmp.mle)**: ')
 
     
 
@@ -156,12 +156,12 @@ with col2:
 
 st.image(image1, use_column_width=True)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-st.write('Our Solution for the NASA mision is focus on the Climate Change Suitable Development Goal. For this we build a set of forecasting models using Prohpet from Meta AI using an Earth Temperature Dataset From 1900 to 2013. The proposed models, the used data and methodology is deteiled in this software which authors call **World Temperature Visor**.')
+st.write('Our Solution for the NASA mision is focus on the Climate Change Suitable Development Goal. For this we build a set of forecasting models using Prohpet from Meta AI using an Earth Temperature Dataset From 1900 to 2013. The proposed models, the used data and methodology is deteiled in this software which authors call **World Temperature Viewer**.')
 
 
 
 if selected == "Home":
-    st.header('World Temperature Visor (WTV)')
+    st.header('World Temperature Viewer (WTV)')
 
     st.write("""**WTV** is an aplication developed as part of the Nasa Mision: Pale Blue Dot, 
              in order to increase visibility and responsability about climate change and global warming. 
