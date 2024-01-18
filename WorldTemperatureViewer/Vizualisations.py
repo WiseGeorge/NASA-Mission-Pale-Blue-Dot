@@ -86,7 +86,7 @@ def GlobeT_Chart(usa_data):
     points = alt.Chart(filtered_data).mark_circle().encode(
         longitude='Longitude:Q',
         latitude='Latitude:Q',
-        color=alt.Color('AverageTemperature:Q', scale=alt.Scale(domain=[-20, 0, 20, 40], range=['darkblue', 'blue', 'white', 'red'])),
+        color=alt.Color('AverageTemperature:Q',title='Temp', scale=alt.Scale(domain=[-20, 0, 20, 40], range=['darkblue', 'blue', 'white', 'red'])),
         tooltip=['Country:N','City:N', 'AverageTemperature:Q']
     )
 
@@ -140,7 +140,7 @@ def USAT_Chart(usa_data):
     usapoints = alt.Chart(filtered_data).mark_circle().encode(
         longitude='Longitude:Q',
         latitude='Latitude:Q',
-        color=alt.Color('AverageTemperature:Q', scale=alt.Scale(domain=[-20, 0, 20, 40], range=['darkblue', 'blue', 'white', 'red'])),
+        color=alt.Color('AverageTemperature:Q', title='Temp', scale=alt.Scale(domain=[-20, 0, 20, 40], range=['darkblue', 'blue', 'white', 'red'])),
         tooltip=['Country:N','City:N', 'AverageTemperature:Q']
     )
 
