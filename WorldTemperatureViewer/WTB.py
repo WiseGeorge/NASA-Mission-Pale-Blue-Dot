@@ -112,7 +112,7 @@ def Author_Component():
 def load_data():
     
     # World Data
-    world_data = pd.read_csv('WorldTemperatureViewer/Data/WorldData.csv')
+    world_data = pd.read_csv('Data/WorldData.csv')
     world_data['dt'] = pd.to_datetime(world_data['dt'])
     world_data['Year'] = world_data['dt'].dt.year
 
