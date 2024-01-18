@@ -27,7 +27,7 @@ cities = WTVM.cities
 
 from Vizualisations import TC_Pie_Plot, GlobeT_Chart, USAT_Chart
 #Streamlit Config Functions
-image1 = Image.open("WorldTemperatureViewer/Images/globe.jpg")
+image1 = Image.open("Images/globe.jpg")
 
 
 def predict_future(model, df, periods):
