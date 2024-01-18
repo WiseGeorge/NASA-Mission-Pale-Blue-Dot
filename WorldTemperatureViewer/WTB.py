@@ -150,7 +150,10 @@ with st.sidebar:
     with st.sidebar:
         Author_Component()
 
-st.title("🪐NASA's Mission: Pale :blue[Blue Dot] 🌎")
+col1,col2,col3 = st.columns([1,8,1])
+with col2:
+    st.title("**🪐NASA's Mission: Pale :blue[Blue Dot] 🌎**")
+
 st.image(image1, use_column_width=True)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 st.write('Our Solution for the NASA mision is focus on the Climate Change Suitable Development Goal. For this we build a set of forecasting models using Prohpet from Meta AI using an Earth Temperature Dataset From 1900 to 2013. The proposed models, the used data and methodology is deteiled in this software which authors call **World Temperature Visor**.')
