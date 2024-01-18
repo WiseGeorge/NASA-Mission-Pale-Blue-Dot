@@ -152,7 +152,7 @@ with st.sidebar:
 
 col1,col2,col3 = st.columns([1,14,1])
 with col2:
-    st.title("**🪐 NASA's Mission: Pale :blue[Blue Dot] 🌎**")
+    st.title("**🪐NASA's Mission: Pale :blue[Blue Dot]🌎**")
 
 st.image(image1, use_column_width=True)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
