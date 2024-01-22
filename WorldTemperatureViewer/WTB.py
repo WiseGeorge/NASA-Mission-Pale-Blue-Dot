@@ -27,7 +27,7 @@ cities = WTVM.cities
 
 from Vizualisations import TC_Pie_Plot, GlobeT_Chart, USAT_Chart
 #Streamlit Config Functions
-image1 = Image.open("WorldTemperatureViewer/Images/globe.jpg")
+image1 = Image.open("Images/globe.jpg")
 
 
 def predict_future(model, df, periods):
@@ -112,7 +112,7 @@ def Author_Component():
 def load_data():
     
     # World Data
-    world_data = pd.read_csv('WorldTemperatureViewer/Data/WorldData.csv')
+    world_data = pd.read_csv('Data/WorldData.csv')
     world_data['dt'] = pd.to_datetime(world_data['dt'])
     world_data['Year'] = world_data['dt'].dt.year
 
