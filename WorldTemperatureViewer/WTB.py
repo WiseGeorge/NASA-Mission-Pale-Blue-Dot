@@ -177,7 +177,7 @@ if selected == "Home":
     st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     
 
-    with st.expander('About'):
+    with st.expander('About',True):
         st.title('About:')
         intro_markdown = read_markdown_file("WorldTemperatureViewer/About.md")
         st.markdown(intro_markdown, unsafe_allow_html=True)
