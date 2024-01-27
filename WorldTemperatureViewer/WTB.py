@@ -29,6 +29,8 @@ from Vizualisations import TC_Pie_Plot, GlobeT_Chart, USAT_Chart
 #Streamlit Config Functions
 image1 = Image.open("WorldTemperatureViewer/Images/globe.jpg")
 
+def read_markdown_file(markdown_file):
+    return Path(markdown_file).read_text()
 
 def predict_future(model, df, periods):
     future = df[['ds']]  # Solo usa las fechas en tu dataframe filtrado
@@ -156,19 +158,14 @@ with col2:
 
 st.image(image1, use_column_width=True)
 st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-st.write('Our Solution for the NASA mision is focus on the Climate Change Suitable Development Goal. For this we build a set of forecasting models using Prohpet from Meta AI using an Earth Temperature Dataset From 1900 to 2013. The proposed models, the used data and methodology is deteiled in this software which authors call **World Temperature Viewer**.')
+st.write("Our solution for the NASA mission focuses on the Sustainable Development Goal related to climate action. To achieve this goal, we built a set of predictive models using Prophet, a tool from Meta AI, based on an Earth land surface temperature dataset from 1900 to 2013 published by Berkley Earth. In addition to these predictive models, we conducted a thorough data analysis, which included the creation of plots, geographic maps, and the calculation of descriptive statistics that helped us unravel the complex behavior of Earth's temperature. The proposed models, the data used, the methodology, and the results of our in-depth analysis are detailed in this software, which the authors have named the World Temperature Viewer.")
 
 
 
 if selected == "Home":
     st.header('World Temperature Viewer (WTV)')
 
-    st.write("""**WTV** is an aplication developed as part of the Nasa Mision: Pale Blue Dot, 
-             in order to increase visibility and responsability about climate change and global warming. 
-             By providing users with an interactive way of contact with the temperature beheaivor 
-             around the globe WTV permit an increase in the knowleadge and reality of this problem, 
-             a problem that we create, and we must solve, Together.
-            Global Warming and Climate Change **DID EXIST**. Pretend like they not will not make them disapear.""") 
+    st.write("""**World Temperature Viewer (WTV)** is an application developed as part of the NASA Mission: Pale Blue Dot Visualization Challenge. Its primary aim is to enhance visibility and responsibility concerning climate change and global warming. By offering users an interactive interface to engage with global temperature patterns, **WTV** facilitates a deeper understanding of this pressing issue - an issue that we, as a collective, have created and must resolve. Global warming and climate change **DO EXIST**, ignoring these realities will not make them disappear.""") 
 
     st.write('#### Why is WTV Usefull? :') 
              
@@ -179,13 +176,15 @@ if selected == "Home":
     
     st.markdown("""<hr style="height:1px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     
-    
+
+    with st.expander('About'):
+        st.title('About:')
+        intro_markdown = read_markdown_file("World-TemperatureViewer/About.md")
+        st.markdown(intro_markdown, unsafe_allow_html=True)
+
     with st.expander('Problem Statement'):
         st.title('Problem Statement:')
-        def read_markdown_file(markdown_file):
-            return Path(markdown_file).read_text()
-
-        intro_markdown = read_markdown_file("README.md")
+        intro_markdown = read_markdown_file("WorldTemperatureViewer/Challenge.md")
         st.markdown(intro_markdown, unsafe_allow_html=True)
 
 if selected=='Data':
