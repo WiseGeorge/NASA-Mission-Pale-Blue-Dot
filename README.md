@@ -1,47 +1,70 @@
-# **Contribution to Nasa Mission: Pale Blue Dot Visualization Challenge**
+# NASA's Pale Blue Dot Mission: World Temperature Viewer
+The NASA Pale Blue Dot Visualization Challenge is a contest that encourages individuals from various fields to create innovative data visualizations using Earth observation data. This initiative was launched as part of the Open Science Year 2023 celebration and NASA’s new Transform to Open Science (TOPS) initiative. The challenge aims to advance at least one of the following Sustainable Development Goals (SDGs): Zero Hunger, Clean Water and Sanitation, and Climate Action. Participants have the opportunity to be part of the open science revolution by unlocking the full potential of Earth observation data, which provides accurate and publicly accessible information about our atmosphere, oceans, ecosystems, land cover, and built environment
 
- Get Involved With NASA. We invite members of the public to contribute their time and expertise to advancing research, solving problems, and potentially winning prizes as a result of their work.
+---
 
-## Problem description
+**By:** Jorge Félix Martínez Pazos
 
-Your goal in this challenge is to create a visualization using Earth observation data that advances at least one of the following Sustainable Development Goals (SDGs):
+**From:** Center for Computational Mathematics Studies. University of Informatics Sciences.
 
-- Zero Hunger
-- Clean Water and Sanitation
-- Climate Action
+---
 
-  ![1701524143449](image/README/1701524143449.png)
+## Introduction
 
-This competition does not require advanced technical or coding skills. Participants at all skill levels are welcome!
+The escalating threat of global warming and climate change, driven by humanity's current trend toward consumerism, deliberate consumption of natural resources, and emission of atmospheric toxins, is a pressing issue. Despite the adoption of renewable energy by many companies, significant change will not be realized until humanity fully acknowledges the impending reality of this problem. Our solution to the Pale Blue Dot challenge focuses on the  Sustainable  Development  Goal:  Climate Action.  We have  extensively  studied  and analyzed the Earth's land surface temperature using an open-source dataset published inKaggleby Berkeley Earth: [https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data.](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data)
 
-## Getting started
+## Overview
 
-### Steps to create a basic submission:
+The World Temperature Viewer (WTV) is our contribution to NASA’s Pale Blue Dot mission. This application leverages data analysis and data science techniques to provide insights into the past and prospective behavior of Land Surface Temperature across the Earth. The software includes a set of models using the Meta AI Prophet Framework to perform robust temperature forecasting for U.S cities. The dataset used is the Global Land Temperature By City, published by Berkeley Earth on Kaggle.
 
-Identify a dataset to use, and decide how you'll access it. See the data section for detailed requirements.
-For an overview of possible datasets to use, check out the data resources blog post. Find a dataset you are interested in, and follow the steps in one of the tutorials linked under "Getting started".
-To identify more publicly available datasets for specific issues you're interested in, check out NASA's Data Pathfinders page. There are pathfinders for a variety of issues, from water quality to agriculture. Each pathfinder provides an overview of datasets relevant to the issue and information about how to access each one.
-Identify a decision or action that this dataset could inform, and that has an impact on at least one of they key competition SDGs (zero hunger, clean water and sanitation, climate action).
-Create your visualization! There are no specific technical requirements. For example, any of the below would be a valid way to create a submission:
-Use Python to access data through an API and generate an interactive visualization using Python
-Download the data, load it into an Excel sheet, and create a visualization in Excel
-Many, many more!
-Write up a short summary of your visual, per the submission format.
-Zip up your summary with an image of your visual! If you'd like to be considered for the Best Overall prize, make sure to include a detailed report too.
+The (WTV) also integrates a comprehensive data analysis resulting in graphical representations, geographic charts, and descriptive statistics that provide powerful insights into the behavior of temperatures on Earth. This interactive exploration not only demystifies the abstract concepts often associated with these phenomena but also highlights their tangible, real-world impacts.
 
-For more inspiration, check out some examples of how Earth observation data can further the SDGs. Or get started by joining one of the participant live tutorials.
+## Methodology
 
-### Data
+The dataset was split into a training set (1970 to 2013) and a test set (2010 to 2013). The model was trained using the Prophet framework with the following parameters:
 
-Your visualization must use at least one publicly available Earth observation dataset collected by a U.S. government agency. "Earth observation data" means observations about the Earth collected in space, such as satellite data, airborne, and in-situ sensors. The data resources blog post suggests some datasets that satisfy this requirement. However, it is not a comprehensive list and we encourage you to explore other datasets too. If you are unsure whether a specific dataset meets this requirements, just ask! Head over to the competition forum to post questions and to find teammates.
+```python
+{
+    'growth': 'linear',      
+    'seasonality_mode': 'additive',   
+    'seasonality_prior_scale': 10.0,   
+    'holidays_prior_scale': 10.0,  
+    'changepoint_prior_scale': 0.05,   
+    'mcmc_samples': 0,        
+    'interval_width': 0.8,    
+    'uncertainty_samples': 1000,   
+    'stan_backend': None
+}
+```
 
-You may access each dataset however you like, as long as the access method is freely available and does not require a paid subscription. For example, using third-party tools like Microsoft's Planetary Computer to access data programmatically is allowed. Downloading data manually from U.S. government repositories is also allowed.
+After training, the model’s performance was evaluated over the test set, reporting robust values for Average Mean Absolute Error (1.3) and Average Mean Squared Error (7.1) across all models. The comparison between observed values and forecasted values for New York and Miami is represented below.
 
-### Supplementary data
+![1706325074431](image/README/1706325074431.png)
 
-You may use any additional datasets, regardless of whether they are Earth observation data, as long as they are publicly and freely available. However, you must ensure that you have the correct rights and permissions to use and share each additional dataset. To do this, you can usually check the license under which the data is shared.
+![1706325104533](image/README/1706325104533.png)
 
-The Guide to Open Science from NASA's Transform to Open Science (TOPS) mission has a useful guide to licenses, including both choosing licenses for your own work and understanding other licenses.
+Our solution underscores the importance of data-driven decision-making in addressing the pressing issue of climate change. By providing a platform that translates rich climate data into actionable insights, we aim to facilitate informed discussions and decisions about sustainable practices and policies.
 
+The **World Temperature Viewer**, a part of NASA’s Pale Blue Dot mission, is available on Streamlit Cloud. This interactive application uses data science techniques to visualize global temperature trends. It’s user-friendly, accessible worldwide, and continuously updated for relevance. The application translates complex climate data into easy-to-understand visualizations, aiding in climate change awareness and understanding.
 
-Link[Link](link.com)
+***World Temperature Viewer:*** [https://nasa-palebluedot-wtv.streamlit.app/](https://nasa-palebluedot-wtv.streamlit.app/)
+
+![1706325456901](image/README/1706325456901.png)
+
+![1706325464436](image/README/1706325464436.png)
+
+![1706325470035](image/README/1706325470035.png)
+
+## Further Information
+
+For an in-depth comprehension of the project, it is recommended to refer to the subsequent resources located within the Pale Blue Dot Solution directory: ‘**Summary**’, ‘**Detailed Report**’, and ‘**Solution Notebook**’. These documents provide extensive information and insights about the project.
+
+## Feedback
+
+Your feedback is greatly appreciated! Feel free to follow the author on the following platforms:
+
+- **LinkedIn:** [https://www.linkedin.com/in/wisegeorgie/](https://www.linkedin.com/in/wisegeorgie/)
+- **Medium:** [https://medium.com/@jorgefmp.mle](https://medium.com/@jorgefmp.mle)
+- **ResearchGate:** [https://www.researchgate.net/profile/Jorge-Martinez-205](https://www.researchgate.net/profile/Jorge-Martinez-205)
+
+Your support and follow are much appreciated!
