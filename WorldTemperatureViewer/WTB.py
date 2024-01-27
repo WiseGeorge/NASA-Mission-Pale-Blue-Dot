@@ -179,7 +179,7 @@ if selected == "Home":
 
     with st.expander('About'):
         st.title('About:')
-        intro_markdown = read_markdown_file("World-TemperatureViewer/About.md")
+        intro_markdown = read_markdown_file("WorldTemperatureViewer/About.md")
         st.markdown(intro_markdown, unsafe_allow_html=True)
 
     with st.expander('Problem Statement'):
