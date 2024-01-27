@@ -1,9 +1,10 @@
 # 🪐NASA's Pale Blue Dot 🌎 Mission: World Temperature Viewer 🌡️
+
 The NASA Pale Blue Dot Visualization Challenge is a contest that encourages individuals from various fields to create innovative data visualizations using Earth observation data. This initiative was launched as part of the Open Science Year 2023 celebration and NASA’s new Transform to Open Science (TOPS) initiative. The challenge aims to advance at least one of the following Sustainable Development Goals (SDGs): Zero Hunger, Clean Water and Sanitation, and Climate Action. Participants have the opportunity to be part of the open science revolution by unlocking the full potential of Earth observation data, which provides accurate and publicly accessible information about our atmosphere, oceans, ecosystems, land cover, and built environment
 
 ---
 
-**By:** Jorge Félix Martínez Pazos
+**By:** Jorge Felix Martínez Pazos
 
 **From:** Center for Computational Mathematics Studies. University of Informatics Sciences.
 
@@ -25,13 +26,13 @@ The dataset was split into a training set (1970 to 2013) and a test set (2010 to
 
 ```python
 {
-    'growth': 'linear',      
+    'growth': 'linear',    
     'seasonality_mode': 'additive',   
     'seasonality_prior_scale': 10.0,   
     'holidays_prior_scale': 10.0,  
     'changepoint_prior_scale': 0.05,   
-    'mcmc_samples': 0,        
-    'interval_width': 0.8,    
+    'mcmc_samples': 0,      
+    'interval_width': 0.8,  
     'uncertainty_samples': 1000,   
     'stan_backend': None
 }
